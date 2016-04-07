@@ -16,4 +16,12 @@ interface CellInterface
     public function symetryXY();
 
     public static function listValues();
+
+    public function getUp();
+
+    public function getDown();
+
+    public function getLeft();
+
+    public function getRight();
 }

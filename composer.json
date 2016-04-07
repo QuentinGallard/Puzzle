@@ -4,7 +4,8 @@
     "authors": [
         {
             "name": "Quentin Gallard",
-            "email": "mrzog.qg@gmail.com"
+            "email": "mrzog.qg@gmail.com",
+            "role": "Master of puppets"
         }
     ],
     "license": "WTFPL",

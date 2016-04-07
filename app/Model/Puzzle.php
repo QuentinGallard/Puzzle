@@ -5,11 +5,11 @@ namespace App\Model;
 class Puzzle
 {
 //Width
-    const MIN_WIDTH = 20;
+    const MIN_WIDTH = 5;
     const MAX_WIDTH = 30;
 
     //Height
-    const MIN_HEIGHT = 20;
+    const MIN_HEIGHT = 5;
     const MAX_HEIGHT = 30;
 
     const CELL_WIDTH = 20;
@@ -132,6 +132,7 @@ class Puzzle
      */
     public function generate($level)
     {
+        $this->chanceSymetry = 0.5;
         $this->seed($level);
         $this->initGridSize();
         return $this->generatePuzzle();
@@ -164,24 +165,15 @@ class Puzzle
     {
 
         if ($symetryX && $symetryY) {
-            $cell    = $this->grid->getCell($this->width - 1 - $x, $this->height - 1 - $y);
-            $newCell = clone $cell;
-            $newCell->symetryXY();
-            return $newCell;
+            return $this->generateCellSymetryXY($x, $y);
         }
 
         if ($symetryX) {
-            $cell    = $this->grid->getCell($this->width - 1 - $x, $y);
-            $newCell = clone $cell;
-            $newCell->symetryX();
-            return $newCell;
+            return $this->generateCellSymetryX($x, $y);
         }
 
         if ($symetryY) {
-            $cell    = $this->grid->getCell($x, $this->height - 1 - $y);
-            $newCell = clone $cell;
-            $newCell->symetryY();
-            return $newCell;
+            return $this->generateCellSymetryY($x, $y);
         }
 
         $cell = '';
@@ -191,7 +183,7 @@ class Puzzle
             $up = 0;
         } else {
             $upCell = $this->grid->getCell($x, $y - 1);
-            $up     = $upCell->down;
+            $up     = $upCell->getDown();
         }
 
         //down
@@ -206,7 +198,7 @@ class Puzzle
             $left = 0;
         } else {
             $leftCell = $this->grid->getCell($x - 1, $y);
-            $left     = $leftCell->right;
+            $left     = $leftCell->getRight();
         }
 
         //right
@@ -219,6 +211,42 @@ class Puzzle
         $cell = $up . $right . $down . $left;
 
         return new Cell($cell);
+    }
+
+    /**
+     * @param int $x
+     * @param int $y
+     * @return CellInterface
+     */
+    private function generateCellSymetryX($x, $y){
+        $cell    = $this->grid->getCell($this->width - 1 - $x, $y);
+        $newCell = clone $cell;
+        $newCell->symetryX();
+        return $newCell;
+    }
+
+    /**
+     * @param int $x
+     * @param int $y
+     * @return CellInterface
+     */
+    private function generateCellSymetryY($x, $y){
+        $cell    = $this->grid->getCell($x, $this->height - 1 - $y);
+        $newCell = clone $cell;
+        $newCell->symetryY();
+        return $newCell;
+    }
+
+    /**
+     * @param int $x
+     * @param int $y
+     * @return CellInterface
+     */
+    private function generateCellSymetryXY($x, $y){
+        $cell    = $this->grid->getCell($this->width - 1 - $x, $this->height - 1 - $y);
+        $newCell = clone $cell;
+        $newCell->symetryXY();
+        return $newCell;
     }
 
     /**

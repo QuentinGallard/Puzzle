@@ -5,10 +5,10 @@ namespace App\Model;
 
 class Cell implements CellInterface
 {
-    public $up;
-    public $right;
-    public $down;
-    public $left;
+    private $up;
+    private $right;
+    private $down;
+    private $left;
 
     public function __construct($params = null)
     {
@@ -73,4 +73,26 @@ class Cell implements CellInterface
         }
         return $values;
     }
+
+    public function getUp()
+    {
+        return $this->up;
+    }
+
+    public function getDown()
+    {
+        return $this->down;
+    }
+
+    public function getLeft()
+    {
+        return $this->left;
+    }
+
+    public function getRight()
+    {
+        return $this->right;
+    }
+
+
 }
