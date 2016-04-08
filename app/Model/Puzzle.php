@@ -176,8 +176,6 @@ class Puzzle
             return $this->generateCellSymetryY($x, $y);
         }
 
-        $cell = '';
-
         //up
         if ($y == 0) { //première ligne du tableau
             $up = 0;

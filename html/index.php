@@ -139,6 +139,18 @@ $grid = $puzzle->generate($level)->getGrid();
         <?php endforeach; ?>
     </ul>
 
+    <h2>Leaderboard</h2>
+    <table id="leaderboard">
+        <tr>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>Roger Rabbit</td>
+            <td>12000</td>
+        </tr>
+    </table>
+
 </div>
 </body>
 </html>
