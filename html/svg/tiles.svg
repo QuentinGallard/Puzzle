@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="0000" viewBox="0 0 20 20">
+
+    </symbol>
+    <symbol id="0001" viewBox="0 0 20 20">
+        <path  d="M0 10h10" /><circle cx="10" cy="10" r="3"/>
+    </symbol>
+    <symbol id="0010" viewBox="0 0 20 20">
+        <path d="M10 20V10"/><circle cx="10" cy="10" r="3"/>
+    </symbol>
+    <symbol id="0011" viewBox="0 0 20 20">
+        <path d="M10 20L0 10"/>
+    </symbol>
+    <symbol id="0100" viewBox="0 0 20 20">
+        <path d="M20 10H10"/><circle cx="10" cy="10" r="3"/>
+    </symbol>
+    <symbol id="0101" viewBox="0 0 20 20">
+        <path d="M0 10h20"/>
+    </symbol>
+    <symbol id="0110" viewBox="0 0 20 20">
+        <path d="M20 10L10 20"/>
+    </symbol>
+    <symbol id="0111" viewBox="0 0 20 20">
+        <path d="M10 20L0 10m0 0h20m0 0L10 20"/>
+    </symbol>
+    <symbol id="1000" viewBox="0 0 20 20">
+
+    </symbol>
+    <symbol id="1001" viewBox="0 0 20 20">
+
+    </symbol>
+    <symbol id="1010" viewBox="0 0 20 20">
+
+    </symbol>
+    <symbol id="1011" viewBox="0 0 20 20">
+
+    </symbol>
+    <symbol id="1100" viewBox="0 0 20 20">
+
+    </symbol>
+    <symbol id="1101" viewBox="0 0 20 20">
+
+    </symbol>
+    <symbol id="1110" viewBox="0 0 20 20">
+
+    </symbol>
+    <symbol id="1111" viewBox="0 0 20 20">
+
+    </symbol>
+
+
+</svg>

@@ -151,6 +151,8 @@ $grid = $puzzle->generate($level)->getGrid();
         </tr>
     </table>
 
+    <svg><use xlink:href="svg/tiles.svg"></use></svg>
+
 </div>
 </body>
 </html>
