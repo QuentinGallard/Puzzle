@@ -35,6 +35,8 @@ $grid = $puzzle->generate($level)->getGrid();
     <meta http-equiv='X-UA-Compatible' content='IE=Edge,IE=10,IE=9,IE=8'/>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script type="text/javascript" src="js/velocity.min.js"></script>
     <link type="text/css" rel="stylesheet" media="all" href="css/normalize.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -118,7 +120,7 @@ $grid = $puzzle->generate($level)->getGrid();
         <?php foreach ($grid as $l => $line): ?>
             <div class="line-<?= $l ?>"><?php
                 foreach ($line as $c => $cell):
-                    ?><div class="cell<?= $cell ?>"><img src="svg/<?= $cell ?>.svg" alt="<?= $cell ?>" height="<?= App\Model\Puzzle::CELL_HEIGHT ?>" width="<?= App\Model\Puzzle::CELL_WIDTH ?>"/></div><?php
+                    ?><div class="cell cell<?= $cell ?>"><img src="svg/<?= $cell ?>.svg" alt="<?= $cell ?>" height="<?= App\Model\Puzzle::CELL_HEIGHT ?>" width="<?= App\Model\Puzzle::CELL_WIDTH ?>"/></div><?php
                 endforeach; ?></div>
         <?php endforeach; ?>
     </div>
@@ -154,5 +156,6 @@ $grid = $puzzle->generate($level)->getGrid();
     <svg><use xlink:href="svg/tiles.svg"></use></svg>
 
 </div>
+<script type="text/javascript" src="js/puzzle.js"></script>
 </body>
 </html>
