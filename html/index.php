@@ -85,6 +85,7 @@ $grid = $puzzle->generate($level)->getGrid();
             height: <?= App\Model\Puzzle::CELL_HEIGHT?>px;
             margin: 0px;
             padding: 0px;
+            box-shadow: #d4f1a9 0 0 0 1px inset ;
             /*background: no-repeat left top;*/
             /*background-size: 100% 100%:*/
             /*font-size: 10px;*/
